@@ -11,6 +11,7 @@ public interface ProductRepo extends JpaRepository<Product, Long> {
 
     Optional<Product> findByName(String name);
 
+    //Created a query method
     @Query("SELECT p FROM Product p WHERE p.price BETWEEN 15 AND 30 ORDER BY p.price")
     List<Product> findTop2ByPriceBetweenOrderByPriceAsc();
 
