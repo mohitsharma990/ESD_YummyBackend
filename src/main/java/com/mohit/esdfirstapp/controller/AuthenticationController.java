@@ -1,6 +1,7 @@
 package com.mohit.esdfirstapp.controller;
 
 import com.mohit.esdfirstapp.dto.LoginRequest;
+import com.mohit.esdfirstapp.dto.LoginResponse;
 import com.mohit.esdfirstapp.service.CustomerService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +18,9 @@ public class AuthenticationController {
     private final CustomerService customerService;
 
     @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody @Valid LoginRequest request) {
-        return ResponseEntity.ok(customerService.login(request));
+    public ResponseEntity<LoginResponse> login(@RequestBody @Valid LoginRequest request) {
+        String token = customerService.login(request);
+        LoginResponse response = new LoginResponse("User logged in successfully", token);
+        return ResponseEntity.ok(response);
     }
 }

@@ -23,7 +23,7 @@ public class JWTHelper {
 
     // Extract expiration date from the token
     public Date extractExpiration(String token) {
-        return extractClaim(teoken, Claims::getExpiration);
+        return extractClaim(token, Claims::getExpiration);
     }
 
     // Extract claims
