@@ -10,5 +10,4 @@ public class ESD_YummyBackendApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ESD_YummyBackendApplication.class, args);
 	}
-
 }
