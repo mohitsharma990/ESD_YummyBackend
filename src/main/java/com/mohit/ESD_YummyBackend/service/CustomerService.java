@@ -4,18 +4,14 @@ import com.mohit.ESD_YummyBackend.dto.CustomerRequest;
 import com.mohit.ESD_YummyBackend.dto.CustomerResponse;
 import com.mohit.ESD_YummyBackend.dto.LoginRequest;
 import com.mohit.ESD_YummyBackend.entity.Customer;
-import com.mohit.ESD_YummyBackend.entity.Product;
 import com.mohit.ESD_YummyBackend.exception.CustomerNotFoundException;
 import com.mohit.ESD_YummyBackend.helper.EncryptionService;
 import com.mohit.ESD_YummyBackend.helper.JWTHelper;
 import com.mohit.ESD_YummyBackend.mapper.CustomerMapper;
 import com.mohit.ESD_YummyBackend.repo.CustomerRepo;
-import com.mohit.ESD_YummyBackend.repo.ProductRepo;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 
 import static java.lang.String.format;
 
